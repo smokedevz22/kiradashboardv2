@@ -34,7 +34,7 @@
         "name"
     ],
     "userpoolClientLambdaRole": "awsadm5b1f6270_userpoolclient_lambda_role",
-    "userpoolClientSetAttributes": true,
+    "userpoolClientSetAttributes": false,
     "sharedId": "5b1f6270",
     "resourceName": "awsadmindash5b1f6270",
     "authSelections": "userPoolOnly",

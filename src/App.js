@@ -10,6 +10,9 @@ import Maintenance from './components/Authentication/maintenance';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Amplify from "aws-amplify";
 import awsExports from "./aws-exports";
+import { withAuthenticator } from '@aws-amplify/ui-react'
+
+
 Amplify.configure(awsExports);
 
 
@@ -51,4 +54,4 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({})
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(withAuthenticator(App))
