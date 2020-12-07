@@ -10,7 +10,7 @@ import Maintenance from './components/Authentication/maintenance';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Amplify from "aws-amplify";
 import awsExports from "./aws-exports";
-import { withAuthenticator } from '@aws-amplify/ui-react'
+import { withAuthenticator ,AmplifySignOut} from '@aws-amplify/ui-react'
 
 
 Amplify.configure(awsExports);
@@ -26,6 +26,9 @@ class App extends Component {
 					this.leftSidebar = leftSidebar;
 				}}
 			>
+
+				<AmplifySignOut />
+
 				<Router>
 					<Switch>
 						<Route path="/signup" component={SignUp} />
